@@ -1,0 +1,9 @@
+#
+# CAMP PI CRONTAB
+# crontab -l > ~/git/camppi/crontab-pi
+#
+*/5 * * * * echo "$(curl ipinfo.io/ip) > ~/camp.ip && scp -P 2200 ~/camp.ip pi@home.unpasteurized.org:~
+30 00 * * * cd ~/git/camppi && git pull
+0 1 * * * /bin/bash ~/git/camppi/cron-0100.sh
+0 2 * * * /bin/bash ~/git/camppi/cron-0200.sh
+0 3 * * * /bin/bash ~/git/camppi/cron-0300.sh
