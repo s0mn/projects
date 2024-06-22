@@ -1,5 +1,5 @@
 from picamera2 import Picamera2, Preview
 import time
-camera = Picamera2()
+picam2 = Picamera2()
 
-camera.capture('/opt/share/image.jpg')
+picam2.start_and_capture_file('/opt/share/image.jpg')
